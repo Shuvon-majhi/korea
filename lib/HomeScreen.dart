@@ -12,9 +12,11 @@ class HomeScreen extends StatelessWidget {
             DataSources.myNews[index]['image'],
             height: 80,
           ),
-          Text(
-            DataSources.myNews[index]['headline'],
-            style: const TextStyle(fontWeight: FontWeight.bold),
+          Center(
+            child: Text(
+              DataSources.myNews[index]['headline'],
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
         ],
       ),
