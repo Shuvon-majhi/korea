@@ -4,7 +4,7 @@ import 'package:korea/data.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  Widget myNewsCard(int index) {
+  Widget myNewsCardData(int index) {
     return Card(
       child: Column(
         children: [
@@ -37,11 +37,11 @@ class HomeScreen extends StatelessWidget {
                   itemCount: DataSources.myNews.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2),
-                  itemBuilder: (context, index) => myNewsCard(index),
+                  itemBuilder: (context, index) => myNewsCardData(index),
                 )
               : ListView.builder(
                   itemCount: DataSources.myNews.length,
-                  itemBuilder: (context, index) => myNewsCard(index),
+                  itemBuilder: (context, index) => myNewsCardData(index),
                 );
         },
       ),
